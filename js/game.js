@@ -6,24 +6,44 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You wake up in your friend's body",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "You pretend to be your friend for a day",
+                    nextLevel: "friend",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "you go back to sleep in hopes you wake up in your own body",
+                    nextLevel: "bed",
                 },
             ]
         },
 
-        cave: {
+        friend: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You come across your friend's significant other!",
+            choices: [
+                {
+                    text: "You run away from them",
+                    nextLevel: "wakeUp",
+                },
+                
+                {
+                    text: "You greet them with a kiss",
+                    nextLevel: "home"
+                },
+                
+                {
+                    text: "You greet them with a handshake",
+                    nextLevel: "suspicious",
+                },
+            ]
+        },
+
+        bed: {
+            message: "You wake up in an hour and return in your body...Woopie",
             choices: [
                 {
                     text: "Start over",
@@ -31,16 +51,15 @@ var game = {
                 },
             ]
         },
-
-        field: {
-            message: "Some adventurer you are...",
+        
+        home: {
+            message: "You arrive home after a long and adventurous day in your friend's body",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "",
+                    nextLevel: "",
                 },
+            
             ]
-        },
-
-    }
+       },
 };
